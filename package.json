@@ -1,0 +1,15 @@
+{
+  "name": "2---copie",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "devStart": "nodemon  server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "method-override": "^3.0.0"
+  }
+}

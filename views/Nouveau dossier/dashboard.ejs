@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="templatemo_style.css">
+    
+</head>
+<body>
+    <h3><%=firstname%></h3>
+    <h3><img id="imagetochange" src="<%=image%>"></h3>
+    <form name="form1" method="POST" action="/addBlog" enctype="multipart/form-data">
+        <table>
+            <tr>
+            <td>title</td>
+            <td><input type="text" name="title" ></td>
+            </tr>
+            <tr>
+                <td>description</td>
+                <td><input type="text" name="description" ></td>
+                </tr>
+                <tr>
+                    <td>Author</td>
+                    <td><input type="text" name="author" ></td>
+                    </tr>
+                    <tr>
+                        <td><input type="file" name="image"  ></td>
+                       </tr>
+                       <tr>
+                        <tr>
+                            <td colspan="2"><input type="submit" value="Save" ></td>
+                            </tr>
+                        </table>
+                        
+                        <% blog.forEach(function(item) { %>
+                            <div>
+                            <h3><%=item.title%></h3>&nbsp&nbsp
+                            <h3><%=item.description%></h3>&nbsp&nbsp
+                            <h3><%=item.author%></h3>&nbsp&nbsp
+                            <img src="<%=item.image%>"><br>&nbsp&nbsp
+                            <button onclick="edit()">edit</button>
+                            <button onclick="deletee()">delete</button>
+                        </div>
+                            <% });%>
+                        
+                        </form>             
+    
+    
+    
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="templatemo_style.css">
+    <link rel="stylesheet" href="styleform.scss">
+
+</head>
+
+<body>
+    <h3>
+        <%=firstname%>
+    </h3>
+    <h3><img id="imagetochange" src="<%=image%>"></h3>
+    <form name="form1" class="form" method="POST" action="/addBlog" enctype="multipart/form-data">
+        <div class="container">
+
+            <input name="title" type="text" placeholder="title" class="form__input" id="name" />
+            <label for="name" class="form__label">title</label>
+
+            <input name="description" type="text" placeholder="description" class="form__input" id="email" />
+            <label for="email" class="form__label">description</label>
+
+            <input name="author" type="text" placeholder="author" class="form__input" id="subject" />
+            <label for="subject" class="form__label">author</label>
+
+            <td><input type="file" name="image"></td>
+            </tr>
+            <tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Save"></td>
+            </tr>
+    </form>
+
+    <% blog.forEach(function(item) { %>
+        <div id="templatemo_background_section_middle">
+
+            <div class="templatemo_container">
+
+                <div id="templatemo_left_section">
+
+                    <div class="templatemo_post">
+
+                        <div class="templatemo_post_top">
+                            <h3>
+                                <%=item.title%>
+                            </h3>
+                        </div>
+                        <div class="templatemo_post_mid_top">
+                        </div>
+
+                        <div class="templatemo_post_mid">
+
+                            <p><img alt="Blog" class="imge" src="<%=item.image%>" />
+                                <%=item.description%>
+
+                        </div>
+                        <div class="templatemo_post_bottom">
+                            <span class="post">Posted By: <%=item.author%>
+
+                        </div>
+
+                    </div>
+                    <a href="/edit/<%= item.id %>" id="myButton">edit</a>
+                    <form name="form2" class="form2" method="GET" action="/delete/<%=item.id%>" enctype="multipart/form-data">
+                    <button type="submit">delete</button>
+                    </form>
+                    <hr>
+                    <% });%>
+                    <a href="logout" id="myButton">logout</a>
+                        
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="templatemo_style.css">
+    
+</head>
+<body>
+    <h3><%=firstname%></h3>
+    <h3><img id="imagetochange" src="<%=image%>"></h3>
+    <form name="form1" method="POST" action="/addBlog" enctype="multipart/form-data">
+        <table>
+            <tr>
+            <td>title</td>
+            <td><input type="text" name="title" ></td>
+            </tr>
+            <tr>
+                <td>description</td>
+                <td><input type="text" name="description" ></td>
+                </tr>
+                <tr>
+                    <td>Author</td>
+                    <td><input type="text" name="author" ></td>
+                    </tr>
+                    <tr>
+                        <td><input type="file" name="image"  ></td>
+                       </tr>
+                       <tr>
+                        <tr>
+                            <td colspan="2"><input type="submit" value="Save" ></td>
+                            </tr>
+                        </table>
+                        
+                        <% blog.forEach(function(item) { %>
+                            <div id="templatemo_background_section_middle">
+    
+                                <div class="templatemo_container">
+                                
+                                    <div id="templatemo_left_section">
+                                        
+                                        <div class="templatemo_post">
+                                        
+                                            <div class="templatemo_post_top">
+                                                <h1>B<h3><%=item.title%></h3>/h1>
+                                            </div>
+                                            <div class="templatemo_post_mid_top">
+                                            </div>
+                                            
+                                      <div class="templatemo_post_mid">
+                                                                        
+                                                <p><img alt="Blog" src="<%=item.image%>" /><%=item.description%>
+                                                
+                                            </div>
+                                            <div class="templatemo_post_bottom">
+                                                <span class="post">Posted By: <%=item.author%> | Category: <a href="#">Javascripts</a> | Added: 15:45, 31 March 2048</span>
+                                                
+                                            </div>
+                                            
+                                        </div>
+                                        <button onclick="edit()">edit</button>
+                                       <button onclick="deletee()">delete</button>
+                            <% });%>
+                        
+                        </form>             
+                        
+    
+    
+
+</body>
+</html>

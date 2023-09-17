@@ -1,0 +1,9 @@
+#imagetochange{
+    width: 50px;
+}
+body{
+    background-color: red;
+}
+div{
+    display:flex;
+}

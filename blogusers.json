@@ -1,0 +1,45 @@
+{
+  "blogs": [
+    {
+      "title": "jklj",
+      "description": "jkljl",
+      "author": "jkljkl",
+      "image": "question mark.jpg",
+      "id": 1
+    },
+    {
+      "title": "hju",
+      "description": "sd",
+      "author": "Yasser",
+      "image": "unique.jpg",
+      "id": 2
+    },
+    {
+      "title": "blog1",
+      "description": "hjkhjk",
+      "author": "Yasser",
+      "image": "atos.png",
+      "id": 3
+    }
+  ],
+  "users": [
+    {
+      "username": "Yasser",
+      "password": "yasser",
+      "image": "question mark.jpg",
+      "id": 2
+    },
+    {
+      "username": "ayman",
+      "password": "prof",
+      "image": "atos.png",
+      "id": 3
+    },
+    {
+      "username": "ibrahim",
+      "password": "fahmi",
+      "image": "fin.jpg",
+      "id": 4
+    }
+  ]
+}
